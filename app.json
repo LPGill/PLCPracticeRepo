@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "plcPracticeProj",
+    "slug": "plcPracticeProj",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "plcPracticeProj"
+}
