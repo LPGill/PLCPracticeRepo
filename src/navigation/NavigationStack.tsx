@@ -6,6 +6,7 @@ import GalleryComponent from '../screens/GalleryScreen';
 import ImageComponent from '../screens/ImageComponent';
 
 const Stack = createStackNavigator();
+
 const NavigationStack = () => {
   return (
     <Stack.Navigator initialRouteName="SplashScreen" screenOptions={{headerShown: false}}>

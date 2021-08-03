@@ -7,8 +7,9 @@ export default function SplashScreen({ navigation }:any) {
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate('Gallery')
-    }, 2000)
+    }, 3000)
   }, [])
+
   const {height, width} = Dimensions.get('window'); 
 
   return (

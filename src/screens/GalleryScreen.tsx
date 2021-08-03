@@ -9,16 +9,19 @@ import { imageObj } from "../utils/types";
 
 
 export default function GalleryComponent({ navigation }:any) {
-    const [image, setImage] = useRecoilState(imageState)
+
+    const [image, setImage] = useRecoilState(imageState);
+
     const updateState = (imageDetails: any) => {
-        let obj: imageObj = { name: imageDetails.imageName, image: imageDetails.imagePath }
-        setImage(obj)
-        navigation.navigate('Image Screen')
+        let obj: imageObj = { name: imageDetails.imageName, image: imageDetails.imagePath };
+        setImage(obj);
+        navigation.navigate('Image Screen');
     }
+
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
-                data={JSON.parse(JSON.stringify(imageList))}
+                data={imageList}
                 renderItem={({ item, index }) => (
                     <TouchableOpacity style={styles.imageContainer} onPress={() => updateState(item)}>
                         <ImageBackground source={item.imagePath} style={styles.image}>

@@ -16,12 +16,10 @@ export default function ImageComponent() {
     const [translateY, setTranslateY] = useState(0);
 
     const onZoomStateChange = _event => {
-        console.log('pinching', _event.nativeEvent);
         setScale(_event.nativeEvent.scale)
     }
 
     const onDrag = _event => {
-        console.log('Dragging', _event.nativeEvent);
         if (scale == 1) {
             return
         } else {
@@ -31,7 +29,6 @@ export default function ImageComponent() {
     }
 
     const setToDefault = _event => {
-        console.log('Tapped twice');
         setScale(1)
         setTranslateX(0);
         setTranslateY(0);
